@@ -26,7 +26,8 @@ if st.button('Generate'):
                     source_language='en', token_count=500, temperature=0.7, n_gen=5)
     for i in range(0,5):
         if len(str(product_description[i]).split())>=50:
-            st.write('Description:', product_description[i])
+             txt = st.text_area('Generated Description',product_description[i]['text'],height=200)
+             #st.write('Description:', product_description[i])
     
    # st.text_area('Description:', product_description)
    
